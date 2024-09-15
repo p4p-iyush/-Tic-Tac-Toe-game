@@ -38,12 +38,14 @@ const checkWinner = () => {
             boxes[c].classList.add("winner");
             winnerName(boxes[a].innerText);
             gameActive = false;
+            setTimeout(resetButton, 1000); // Reset the game after 2 seconds
             return;
         }
     }
     if ([...boxes].every(box => box.innerText)) {
         winner_name.innerText = "It's a draw!";
         gameActive = false;
+        setTimeout(resetButton, 1000); // Reset the game after 2 seconds
     }
 };
 
